@@ -1,7 +1,4 @@
 <?php
-	// Set response header to application/json
-	header('Content-type: application/json');
-
 	// Define MySQL connection data
 	$MYSQL['host'] = "localhost";
 	$MYSQL['user'] = "anychart_user";

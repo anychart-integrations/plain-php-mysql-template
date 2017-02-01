@@ -50,6 +50,12 @@ $  mysql < database_backup.sql
 Drop `index.php`, `data.php` and `css` folder to a folder where you serve your .php files and your server (e.g. Apache or Nginx) could get them.
 Open browser at an appropriate url.
 
+Now you can update MySQL database data, run (don't forget to use `-u -p` flags if you need):
+```
+$  mysql < database_backup.sql
+```
+The chart on web page will update automatically.
+
 ## Workspace
 Your workspace should look like:
 ```
@@ -60,6 +66,7 @@ php-mysql-template/
     index.php				# main PHP file including HTML template
     data.php				# PHP file which loads data from MySQL
     database_backup.sql     # MySQL database dump
+    database_backup.sql		# MySQL script to update database data
     LICENSE
     README.md
 ```

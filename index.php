@@ -12,12 +12,20 @@
 <div id="container"></div>
 <script>
     anychart.onDocumentReady(function() {
-        anychart.data.loadJsonFile("/data.php", function (data) {
-            var chart = anychart.pie(data);
-            chart.title("Top 5 fruits");
-            chart.container("container");
-            chart.draw();
-        });
+        // init and draw chart
+    	var chart = anychart.pie(<?php include 'data.php';?>);
+        chart.title("Top 5 fruits");
+        chart.container("container");
+        chart.draw();
+
+        // update chart from server every 5 seconds
+        setInterval(function(){
+            // make request to server
+            // to use loadJsonFile function you must include data-adapter.min.js to your page
+            anychart.data.loadJsonFile("/data.php", function (data) {
+                chart.data(data);
+            })
+        }, 5000);
     });
 </script>
 </body>
