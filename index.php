@@ -16,7 +16,7 @@
             var chart = anychart.pie(data);
             chart.title("Top 5 fruits");
             chart.container("container");
-		    chart.draw();
+            chart.draw();
         });
     });
 </script>
