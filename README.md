@@ -37,18 +37,18 @@ Ensure you have php-mysql being installed, run:
 ```
 $ php -m
 ```
-If there isn't 'mysql' install it:
+If there isn't `mysql` in the list install it:
 ```
 $ sudo apt-get install php{your_php_version}-mysql # e.g. sudo apt-get install php5.6-mysql
 ```
 
-Set up MySQL database, use -u -p flags to provide username and password:
+Set up MySQL database, use `-u -p` flags to provide username and password:
 ```
 $  mysql < database_backup.sql
 ```
 
-Drop index.php, data.php and css folder to a folder where you serve your .php files and your server (e.g. Apache or Nginx) could get them.
-Open browser at appropriate url.
+Drop `index.php`, `data.php` and `css` folder to a folder where you serve your .php files and your server (e.g. Apache or Nginx) could get them.
+Open browser at an appropriate url.
 
 ## Workspace
 Your workspace should look like:
@@ -57,7 +57,7 @@ php-mysql-template/
     static/
         css/
             style.css		# css style
-    index.php				# main PHP file including template
+    index.php				# main PHP file including HTML template
     data.php				# PHP file which loads data from MySQL
     database_backup.sql     # MySQL database dump
     LICENSE
