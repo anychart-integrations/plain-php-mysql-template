@@ -11,9 +11,8 @@
 <body>
 <div id="container"></div>
 <script>
-    anychart.onDocumentReady(function() {
-        // init and draw chart
-    	var chart = anychart.pie(<?php include 'data.php';?>);
+    anychart.data.loadJsonFile("/data.php", function (data) {  // init and draw chart
+        var chart = anychart.pie(data);
         chart.title("Top 5 fruits");
         chart.container("container");
         chart.draw();

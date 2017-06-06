@@ -6,22 +6,19 @@
 	$MYSQL['database'] = "anychart_db";
 
 	// Connect to MySQL database
-	$connect = mysql_connect($MYSQL['host'],$MYSQL['user'],$MYSQL['password']);
-	mysql_select_db($MYSQL['database'], $connect);
-	if (!$connect) {
-	    die('Could not connect: ' . mysql_error());
-	}	
+	$mysqli = mysqli_connect($MYSQL['host'],$MYSQL['user'],$MYSQL['password'],$MYSQL['database']);
 
 	// Make SQL request
-	$res = mysql_query("SELECT name, value FROM fruits ORDER BY value DESC LIMIT 5", $connect);
+	$result = $mysqli->query("SELECT name, value FROM fruits ORDER BY value DESC LIMIT 5");
 
 	// Loop through the result and populate an array
 	$fruits = Array();
-	while ($fruit = mysql_fetch_assoc($res)){
-		$fruits[] = $fruit;
-	}
+    while ($fruits[] = $result->fetch_assoc()){}
+    array_pop($fruits);
 
 	// Return the result and close MySQL connection
-	mysql_close($connect);
+    $mysqli->close();
+    header('Content-type: application/json');
+
 	echo json_encode($fruits);
 ?>
