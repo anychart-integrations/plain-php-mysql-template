@@ -51,7 +51,7 @@ Open browser at an appropriate url.
 
 Now you can update MySQL database data, run (don't forget to use `-u -p` flags if you need):
 ```
-$  mysql < database_backup.sql
+$  mysql < database_update.sql
 ```
 The chart on web page will update automatically.
 
@@ -65,7 +65,7 @@ php-mysql-template/
     index.php				# main PHP file including HTML template
     data.php				# PHP file which loads data from MySQL
     database_backup.sql     # MySQL database dump
-    database_backup.sql		# MySQL script to update database data
+    database_update.sql		# MySQL script to update database data
     LICENSE
     README.md
 ```
