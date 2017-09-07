@@ -61,11 +61,11 @@ Your workspace should look like:
 php-mysql-template/
     static/
         css/
-            style.css		# css style
-    index.php				# main PHP file including HTML template
-    data.php				# PHP file which loads data from MySQL
+            style.css       # css style
+    index.php               # main PHP file including HTML template
+    data.php                # PHP file which loads data from MySQL
     database_backup.sql     # MySQL database dump
-    database_update.sql		# MySQL script to update database data
+    database_update.sql     # MySQL script to update database data
     LICENSE
     README.md
 ```
