@@ -24,7 +24,7 @@ To start this example run commands listed below.
 
 Clone the repository from github.com:
 ```
-$ git clone git@github.com:anychart-integrations/php-mysql-template.git
+$ git clone git@github.com:anychart-integrations/plain-php-mysql-template.git
 ```
 
 Navigate to the repository folder:
